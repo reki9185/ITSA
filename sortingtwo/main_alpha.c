@@ -5,7 +5,7 @@
 #include "quicksorte.h"
 #include "mergesorte.h"
 #include "heapsorte.h"
-
+#include "radixsorte.h"
 char*a[1000010];
 
 int main(int argc,char*argv[]){
@@ -33,6 +33,10 @@ int main(int argc,char*argv[]){
 			gettimeofday(&start,NULL);
 			myheapsort(a,cnt);
 			gettimeofday(&end,NULL);
+		}else if(strcmp(argv[i],"radixsort")==0){
+			gettimeofday(&start,NULL);
+                        myradixsorte(a,cnt);
+                        gettimeofday(&end,NULL);
 		}
 	}
 

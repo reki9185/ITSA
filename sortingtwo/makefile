@@ -1,7 +1,7 @@
 all: main_number main_alpha
 main_number: main_number.c quicksort.o quicksort2.o mergesort.o mergesort2.o heapsort.o radixsort.o
 	gcc main_number.c quicksort.o quicksort2.o mergesort.o mergesort2.o heapsort.o radixsort.o -o main_number
-main_alpha: main_alpha.c quicksorte.o mergesorte.o heapsorte.o
+main_alpha: main_alpha.c quicksorte.o mergesorte.o heapsorte.o radixsorte.o
 	gcc main_alpha.c quicksorte.o mergesorte.o heapsort.o -o main_alpha
 quicksort.o: quicksort.h quicksort.c
 	gcc -c quicksort.c -o quicksort.o
@@ -21,6 +21,8 @@ mergesorte.o: mergesorte.h mergesorte.c
 	gcc -c mergesorte.c -o mergesorte.o
 heapsorte.o: heapsorte.h heapsorte.c
 	gcc -c heapsorte.c -o heapsorte.o
+radixsorte.o: radixsorte.h radixsorte.c
+	gcc -c radixsorte.c -o radixsorte.o
 clean:
-	rm quicksort.o quicksort2.o mergesort.o mergesort2.o heapsort.o radixsort.o main_number quicksorte.o mergesorte.o heapsorte.o main_alpha
+	rm quicksort.o quicksort2.o mergesort.o mergesort2.o heapsort.o radixsort.o main_number quicksorte.o mergesorte.o heapsorte.o radixsorte.o  main_alpha
 
