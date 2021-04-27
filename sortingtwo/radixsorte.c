@@ -32,18 +32,3 @@ void myradixsorte(char*a[],long long cnt){
 		}
 	}
 }
-
-char*a[1000010];
-int main(){
-	char line[1024];
-	long long cnt=0;
-	while(scanf("%s",line)!=EOF){
-		a[cnt]=strdup(line);
-		cnt++;
-	}
-	myradixsorte(a,cnt);
-	for(long long i=0;i<cnt;i++){
-		printf("%s\n",a[i]);
-	}
-	return 0;
-}

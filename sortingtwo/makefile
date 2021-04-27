@@ -2,7 +2,7 @@ all: main_number main_alpha
 main_number: main_number.c quicksort.o quicksort2.o mergesort.o mergesort2.o heapsort.o radixsort.o
 	gcc main_number.c quicksort.o quicksort2.o mergesort.o mergesort2.o heapsort.o radixsort.o -o main_number
 main_alpha: main_alpha.c quicksorte.o mergesorte.o heapsorte.o radixsorte.o
-	gcc main_alpha.c quicksorte.o mergesorte.o heapsort.o -o main_alpha
+	gcc main_alpha.c quicksorte.o mergesorte.o heapsort.o radixsorte.o -o main_alpha
 quicksort.o: quicksort.h quicksort.c
 	gcc -c quicksort.c -o quicksort.o
 quicksort2.o: quicksort2.h quicksort2.c
